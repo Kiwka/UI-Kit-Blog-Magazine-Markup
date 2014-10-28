@@ -8,7 +8,7 @@
 </head>
 <body>
 <nav class="menu-horizontal full-width">
-	<div></div>
+	<div class="menu-horizontal__menu"></div>
 	<ul class="menu-horizontal__items">
 		<li class="menu-horizontal__item"><a href="">Home</a></li>
 		<li class="menu-horizontal__item"><a href="">Store</a></li>
@@ -16,6 +16,8 @@
 		<li class="menu-horizontal__item"><a href="">About</a></li>
 		<li class="menu-horizontal__item"><a href="">Contact</a></li>
 	</ul>
+	<div class="menu-horizontal__icons">
+	</div>
 </nav>
 <nav class="menu-vertical half-width">
 	<div class="menu-vertical__main">
@@ -29,14 +31,14 @@
 			<li class="menu-vertical__main__item"><a class="menu-vertical__contact" href="">Contact</a></li>
 		</ul>
 		<footer class="menu-vertical__footer">
-			<ul class="menu-vertical__footer__phone">
+			<ul class="menu-vertical__footer__phone menu-vertical__footer__item">
 				<li><a href="tel:+19125551234">(912)555-1234</tel></a></li>
 				<li><a href="tel:+19125555678">(912)555-5678</a></li>
 			</ul>
-			<div class="menu-vertical__footer__address">
+			<div class="menu-vertical__footer__address menu-vertical__footer__item">
 				1600 Pennsylvania Ave NW, Washington DC 20500, USA
 			</div>
-			<ul class="menu-vertical__footer__email">
+			<ul class="menu-vertical__footer__email menu-vertical__footer__item">
 				<li><a href="mailto:hello@website.com">hello@website.com</a></li>
 				<li><a href="mailto:office@website.com">office@website.com</a></li>
 			</ul>
@@ -97,13 +99,19 @@
 </section>
 <section id="sign-in" class="half-width">
 	<h2 class="sign-in__header">Sign in</h2>
-	<p>Just select your favorite network to get started</p>
+	<p class="sign-in__text">Just select your favorite network to get started</p>
 	<div class="sign-in__icon sign-in__facebook"></div>
 	<div class="sign-in__icon sign-in__twitter"></div>
 	<div class="sign-in__icon sign-in__google"></div>
 	<div class="sign-in__icon sign-in__linkedin"></div>
 </section>
-<section id="newsletter" class="half-width">
+<section id="newsletter" class="half-width newsletter">
+	<h2 class="newsletter__header">Join the Newsletter</h2>
+	<p class="newsletter__text">Sign up for our personalized daily newsletter</p>
+	<form action="">
+		<input class="newsletter__input" type="text" placeholder="Enter email address">
+		<input class="newsletter__button" type="submit" value="Sign Up">
+	</form>
 </section>
 </body>
 </html>

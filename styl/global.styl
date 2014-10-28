@@ -2,19 +2,72 @@
 //Social networks colors
 $twitter_color=#4fc6f8
 $facebook_color=#4d6baa
-$rss-color=#fa9b39
-$pinterest-color=#910101
+$rss_color=#fa9b39
+$pinterest_color=#910101
 $google_color=#ea6060
 $linkedin_color=#238cc8
 
 //Others typical colors
 $hover-color=#56ccc8
+$nonactive_color=#c5cdd1
+
+//Icons font
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?54034198');
+  src: url('../font/fontello.eot?54034198#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff?54034198') format('woff'),
+       url('../font/fontello.ttf?54034198') format('truetype'),
+       url('../font/fontello.svg?54034198#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+//Icons variables
+$icon-menu=e800
+$icon-search=e801
+$icon-facebook=e802
+$icon-twitter=e803
+$icon-user=e804
+$icon-gplus=e805
+$icon-plus=e806
+$icon-linkedin=e807
+$icon-ok-circle=e808
+$icon-home=e809
+$icon-basket=e80a
+$icon-edit=e80b
+$icon-group=e80c
+$icon-award=e80d
+$icon-info=e80e
+$icon-mail=e80f
+$icon-phone=e810
+$icon-location=e811
+$icon-facebook-circled=e812
+$icon-twitter-circled=e813
+$icon-gplus-circled=e814
+$icon-pinterest-circled=e815
+$icon-right-circle=e816
+$icon-left-open=e817
+$icon-right-open=e818
+$icon-videocam=e819
+$icon-camera=e81a
+$icon-clock=e81b
+$icon-export=e81c
+$icon-heart=e81d
+$icon-heart-empty=e81e
+$icon-right-dir=e81f
 
 //Sizes
-$blocks_margin = 12px 6px 0px 6px
-$full_width=960px
+$one_margin=6px
+$blocks_margin = $one_margin*2 $one_margin 0px $one_margin
+$full_width=960px+(2*$one_margin)
 
-
+//Typical block view
+blockview()
+	background-color white
+	display inline-block
+	float left
+	margin $blocks_margin
 
 //Global styles for the web-page
 body
@@ -25,65 +78,71 @@ body
 
 //Style for all blocks
 .full-width
-	width $full_width+(-12)
-	display block
-	margin $blocks_margin
+	width $full_width+(-2*$one_margin)
+	blockview()
 
 .half-width
-	width +($full_width/2)+(-12)
-	display inline-block
-	margin $blocks_margin
-	float left
+	width +($full_width/2)+(-2*$one_margin)
+	blockview()
 
 .third
-	width +($full_width/3)+(-6)
-	display inline-block
-	margin $blocks_margin
-	float left
+	width +($full_width/3)+(-1*$one_margin)
+	blockview()
 
 .two-third
-	width +(2*$full_width/3)+(-6)
-	display inline-block
-	margin $blocks_margin
-	float left
+	width +(2*$full_width/3)+(-1*$one_margin)
+	blockview()
 
 .quarter
-	width +($full_width/4)+(-12)
-	margin $blocks_margin
-	display inline-block
-	float left
-
+	width +($full_width/4)+(-2*$one_margin)
+	blockview()
 
 //Style of the horizontal menu
 .menu-horizontal
-	background-color white
 	height 60px
-	line-height 60px
-	display inline-block
-	/*&::before
-		display inline
+	line-height @height
+	&__menu
+		display inline-block
 		width 60px
 		background-color $hover-color
 		color #fff
-		content "menu"
-	*/
+		text-align center
+	&__menu:before
+		font-family "fontello"
+		content '\'+$icon-menu
+		text-align center
+		font-size 18px
 	&__items
 		margin 0px
+		display inline-block
 	&__item
 		display inline-block
 		padding-right 40px
 		&:first-child
-			padding-left 109px
+			padding-left 50px
 		&:last-child
 			padding-right 0px
 		& a
 			text-decoration none
 
 //Style of the vertical menu
+$menu_icons = {
+	home: $icon-home
+	store: $icon-basket
+	blog: $icon-edit
+	community: $icon-group
+	contests: $icon-award
+	about: $icon-info
+	contact: $icon-mail
+}
+
+$footer_icons = {
+	phone: $icon-phone
+	address: $icon-location
+	email: $icon-mail
+}
 
 .menu-vertical
-	background-color white
-	display inline-block
 	& ul
 		list-style-type none
 		padding-left 0px
@@ -99,7 +158,6 @@ body
 		border-bottom 1px gray solid
 		& a
 			text-decoration none
-			padding-left 65px
 			display block
 			box-sizing border-box
 			height 60px
@@ -112,10 +170,34 @@ body
 			&:target
 				background-color $hover-color
 				color #fff
+	for $menu_icons-name, $menu_icons-keycode in $menu_icons
+		&__{$menu_icons-name}:before
+			content '\'+$menu_icons-keycode
+			font-family "fontello"
+			display inline-block
+			margin-right 20px
+			margin-left 20px
+			font-size 20px
+			color $nonactive_color
+		&__{$menu_icons-name}:hover:before
+			color white
 	&__footer
-		background-color #c5cdd1
+		background-color $nonactive_color
 		height 100%
 		color #fff
+		&__item
+			display inline-block
+			& a
+				text-decoration none
+				color white
+		for $footer_icons-name, $footer_icons-keycode in $footer_icons
+			&__{$footer_icons-name}:before
+				content '\'+$footer_icons-keycode
+				font-family "fontello"
+				display inline-block
+				margin-right 20px
+				margin-left 20px
+				font-size 20px
 	&__second
 		width 50%
 		float right
@@ -136,22 +218,40 @@ $social_colors = {
 	facebook: $facebook_color
 	twitter: $twitter_color
 	google: $google_color
-	rss: $rss-color
-	pinterest: $pinterest-color
+	rss: $rss_color
+	pinterest: $pinterest_color
+}
+
+$social_icons = {
+	facebook: $icon-facebook-circled
+	twitter: $icon-twitter-circled
+	google: $icon-gplus-circled
+	pinterest: $icon-pinterest-circled
 }
 
 #social
-	background-color white
 	& ul
 		list-style-type none
 		margin 31px 0
+		padding-left 21px
 .social
 	& a
 		line-height 50px
 		text-decoration none
 		color black
+	for $social_icons-name, $social_icons-keycode in $social_icons
+		&__{$social_icons-name}:before
+			font-family "fontello"
+			display inline-block
+			font-size 31px
+			margin-right 21px
+			color $nonactive_color
+			line-height 50px
+			content '\'+$social_icons-keycode
 	for $social_colors-name, $social_colors-keycode in $social_colors
 		&__{$social_colors-name}:hover
+			color $social_colors-keycode
+		&__{$social_colors-name}:hover:before
 			color $social_colors-keycode
 
 //Facebook section
@@ -169,17 +269,40 @@ $social_colors = {
 		bottom 23px
 		right 53px
 		font-weight 300
+	&:before
+		font-family "fontello"
+		position absolute
+		left 23px
+		top 23px
+		font-size 42px
 
 #facebook
 	background-color $facebook_color
+	&:before
+		content '\'+$icon-facebook
 
 #twitter
 	background-color $twitter_color
+	&:before
+		content '\'+$icon-twitter
 
 //Sign-in section
+$social_colors = {
+	facebook: $facebook_color
+	twitter: $twitter_color
+	google: $google_color
+	linkedin: $linkedin_color
+}
+
+$social_icons = {
+	facebook: $icon-facebook
+	twitter: $icon-twitter
+	google: $icon-gplus
+	linkedin: $icon-linkedin
+}
+
 #sign-in
 	text-align center
-	background-color white
 	height 165px
 .sign-in
 	&__header
@@ -192,14 +315,46 @@ $social_colors = {
 		height 32px
 		width @height
 		border-radius 50%
-		display inline-block
 		margin 0 11px
-	&__facebook
-		background-color $facebook_color
-	&__twitter
-		background-color $twitter_color
-	&__google
+		font-family "fontello"
+		color white
+		display inline-block
+		&:before
+			display inline-block
+	for $social_colors-name, $social_colors-keycode in $social_colors
+		&__{$social_colors-name}
+			background-color $social_colors-keycode
+	for $social_icons-name, $social_icons-keycode in $social_icons
+		&__{$social_icons-name}:before
+			content '\'+$social_icons-keycode
+
+.newsletter
+	text-align center
+	height 150px
+	&__header
+		font-weight 400
+		font-size 24px
+	&__text
+		font-weight 300
+		font-size 15px
+	&__input
+		height 38px
+		line-height @height
+		width 285px
+		margin-right 15px
+		padding-left 19px
+		box-sizing border-box
+
+	&__button
 		background-color $google_color
-	&__linkedin
-		background-color $linkedin_color
+		border-radius 5px
+		border 0
+		padding 0 28px
+		height 38px
+		line-height @height
+		color white
+		text-transform uppercase
+		font-size 15px
+
+
 
