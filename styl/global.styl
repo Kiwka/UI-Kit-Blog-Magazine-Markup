@@ -1,7 +1,205 @@
+//Colors palete
+//Social networks colors
+$twitter_color=#4fc6f8
+$facebook_color=#4d6baa
+$rss-color=#fa9b39
+$pinterest-color=#910101
+$google_color=#ea6060
+$linkedin_color=#238cc8
+
+//Others typical colors
+$hover-color=#56ccc8
+
+//Sizes
+$blocks_margin = 12px 6px 0px 6px
+$full_width=960px
+
+
+
 //Global styles for the web-page
 body
 	background-color #4b627e
+	margin 0 auto
+	width $full_width
+	font-family Roboto, Arial, serif
 
 //Style for all blocks
 .full-width
-	width 100%
+	width $full_width+(-12)
+	display block
+	margin $blocks_margin
+
+.half-width
+	width +($full_width/2)+(-12)
+	display inline-block
+	margin $blocks_margin
+	float left
+
+.third
+	width +($full_width/3)+(-6)
+	display inline-block
+	margin $blocks_margin
+	float left
+
+.two-third
+	width +(2*$full_width/3)+(-6)
+	display inline-block
+	margin $blocks_margin
+	float left
+
+.quarter
+	width +($full_width/4)+(-12)
+	margin $blocks_margin
+	display inline-block
+	float left
+
+
+//Style of the horizontal menu
+.menu-horizontal
+	background-color white
+	height 60px
+	line-height 60px
+	display inline-block
+	/*&::before
+		display inline
+		width 60px
+		background-color $hover-color
+		color #fff
+		content "menu"
+	*/
+	&__items
+		margin 0px
+	&__item
+		display inline-block
+		padding-right 40px
+		&:first-child
+			padding-left 109px
+		&:last-child
+			padding-right 0px
+		& a
+			text-decoration none
+
+//Style of the vertical menu
+
+.menu-vertical
+	background-color white
+	display inline-block
+	& ul
+		list-style-type none
+		padding-left 0px
+		margin-top 0px
+		margin-bottom 0px
+	&__main
+		display inline-block
+		width 50%
+		float left
+	&__main__item
+		height 60px
+		line-height 60px
+		border-bottom 1px gray solid
+		& a
+			text-decoration none
+			padding-left 65px
+			display block
+			box-sizing border-box
+			height 60px
+			width 100%
+			&:visited
+				color black
+			&:hover
+				background-color $hover-color
+				color #fff
+			&:target
+				background-color $hover-color
+				color #fff
+	&__footer
+		background-color #c5cdd1
+		height 100%
+		color #fff
+	&__second
+		width 50%
+		float right
+		display inline-block
+		color #fff
+	&__section
+		border-bottom 1px $hover-color solid
+		background-color #152840
+		& li
+			padding-left 33px
+	&__header
+		color $hover-color
+		padding-left 33px
+
+
+//Style for social networks list
+$social_colors = {
+	facebook: $facebook_color
+	twitter: $twitter_color
+	google: $google_color
+	rss: $rss-color
+	pinterest: $pinterest-color
+}
+
+#social
+	background-color white
+	& ul
+		list-style-type none
+		margin 31px 0
+.social
+	& a
+		line-height 50px
+		text-decoration none
+		color black
+	for $social_colors-name, $social_colors-keycode in $social_colors
+		&__{$social_colors-name}:hover
+			color $social_colors-keycode
+
+//Facebook section
+.network
+	position relative
+	height 150px
+	color white
+	&__number
+		position absolute
+		bottom 23px
+		left 23px
+		font-weight 700
+	&__status
+		position absolute
+		bottom 23px
+		right 53px
+		font-weight 300
+
+#facebook
+	background-color $facebook_color
+
+#twitter
+	background-color $twitter_color
+
+//Sign-in section
+#sign-in
+	text-align center
+	background-color white
+	height 165px
+.sign-in
+	&__header
+		font-weight 400
+		font-size 24px
+	&__text
+		font-weight 300
+		font-size 15px
+	&__icon
+		height 32px
+		width @height
+		border-radius 50%
+		display inline-block
+		margin 0 11px
+	&__facebook
+		background-color $facebook_color
+	&__twitter
+		background-color $twitter_color
+	&__google
+		background-color $google_color
+	&__linkedin
+		background-color $linkedin_color
+
