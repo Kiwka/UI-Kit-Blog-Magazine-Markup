@@ -63,7 +63,7 @@ $blocks_margin = $one_margin*2 $one_margin 0px $one_margin
 $full_width=960px+(2*$one_margin)
 
 //Typical block view
-blockview()
+block-view()
 	background-color white
 	display inline-block
 	float left
@@ -79,23 +79,23 @@ body
 //Style for all blocks
 .full-width
 	width $full_width+(-2*$one_margin)
-	blockview()
+	block-view()
 
 .half-width
 	width +($full_width/2)+(-2*$one_margin)
-	blockview()
+	block-view()
 
 .third
 	width +($full_width/3)+(-1*$one_margin)
-	blockview()
+	block-view()
 
 .two-third
 	width +(2*$full_width/3)+(-1*$one_margin)
-	blockview()
+	block-view()
 
 .quarter
 	width +($full_width/4)+(-2*$one_margin)
-	blockview()
+	block-view()
 
 //Style of the horizontal menu
 .menu-horizontal
@@ -115,6 +115,7 @@ body
 	&__items
 		margin 0px
 		display inline-block
+		padding 0px
 	&__item
 		display inline-block
 		padding-right 40px
@@ -145,30 +146,30 @@ $footer_icons = {
 .menu-vertical
 	& ul
 		list-style-type none
-		padding-left 0px
 		margin-top 0px
 		margin-bottom 0px
+		padding-left 0px
 	&__main
 		display inline-block
 		width 50%
 		float left
-	&__main__item
-		height 60px
-		line-height 60px
-		border-bottom 1px gray solid
-		& a
-			text-decoration none
-			display block
-			box-sizing border-box
+		&__item
 			height 60px
-			width 100%
-			&:visited
-				color black
-			&:hover
-				background-color $hover-color
-				color #fff
-			&:target
-				background-color $hover-color
+			line-height 60px
+			border-bottom 1px gray solid
+			& a
+				text-decoration none
+				display block
+				box-sizing border-box
+				height 60px
+				width 100%
+				&:visited
+					color black
+				&:hover
+					background-color $hover-color
+					color #fff
+				&:target
+					background-color $hover-color
 				color #fff
 	for $menu_icons-name, $menu_icons-keycode in $menu_icons
 		&__{$menu_icons-name}:before
@@ -185,8 +186,13 @@ $footer_icons = {
 		background-color $nonactive_color
 		height 100%
 		color #fff
+		padding-top 16px
+		padding-bottom 16px
 		&__item
-			display inline-block
+			display block
+			margin-left 65px
+			padding-top 16px
+			padding-bottom 16px
 			& a
 				text-decoration none
 				color white
@@ -195,22 +201,37 @@ $footer_icons = {
 				content '\'+$footer_icons-keycode
 				font-family "fontello"
 				display inline-block
-				margin-right 20px
-				margin-left 20px
+				position absolute
+				left 20px
 				font-size 20px
+				top @font-size
+			&__{$footer_icons-name}
+				display inline-block
+				position relative
 	&__second
 		width 50%
 		float right
 		display inline-block
 		color #fff
+		line-height 30px
 	&__section
 		border-bottom 1px $hover-color solid
+		&:last-child
+			border-bottom none
 		background-color #152840
+		padding 8px 0
 		& li
 			padding-left 33px
 	&__header
 		color $hover-color
 		padding-left 33px
+		padding-bottom 6px
+		&:after
+			font-family "fontello"
+			content "\"+$icon-right-circle
+			float right
+			margin-right 18px
+
 
 
 //Style for social networks list
@@ -232,9 +253,11 @@ $social_icons = {
 #social
 	& ul
 		list-style-type none
-		margin 31px 0
+		margin 21px 0
 		padding-left 21px
 .social
+	& li
+		line-height 50px
 	& a
 		line-height 50px
 		text-decoration none
@@ -249,8 +272,7 @@ $social_icons = {
 			line-height 50px
 			content '\'+$social_icons-keycode
 	for $social_colors-name, $social_colors-keycode in $social_colors
-		&__{$social_colors-name}:hover
-			color $social_colors-keycode
+		&__{$social_colors-name}:hover,
 		&__{$social_colors-name}:hover:before
 			color $social_colors-keycode
 
@@ -308,12 +330,14 @@ $social_icons = {
 	&__header
 		font-weight 400
 		font-size 24px
+		margin-bottom 15px
 	&__text
 		font-weight 300
 		font-size 15px
 	&__icon
 		height 32px
 		width @height
+		line-height @height
 		border-radius 50%
 		margin 0 11px
 		font-family "fontello"
@@ -334,6 +358,7 @@ $social_icons = {
 	&__header
 		font-weight 400
 		font-size 24px
+		margin-bottom 15px
 	&__text
 		font-weight 300
 		font-size 15px
@@ -355,6 +380,3 @@ $social_icons = {
 		color white
 		text-transform uppercase
 		font-size 15px
-
-
-
