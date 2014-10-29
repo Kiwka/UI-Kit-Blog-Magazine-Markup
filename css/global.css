@@ -356,6 +356,9 @@ body {
   font-weight: 300;
   padding-left: 33px;
 }
+.menu-vertical__section:hover {
+  background-color: #263a54;
+}
 .menu-vertical__header {
   color: #56ccc8;
   padding-left: 33px;
