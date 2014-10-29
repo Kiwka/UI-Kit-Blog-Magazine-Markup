@@ -7,4 +7,5 @@ Traning task in markup creation
 
 **Personal aim:** train skills working with Stylus and Grunt as well as in markup creation. Train modular approach in markup creation. 
 
-Preview of the created markup of the UI Kit is available here: (coming soon)
+**Preview of the created markup of the UI Kit is available here:**
+http://kiwka.github.io/UI-Kit-Blog-Magazine-Markup/
