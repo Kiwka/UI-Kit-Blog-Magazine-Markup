@@ -376,53 +376,57 @@ body {
   line-height: 50px;
 }
 .social a {
-  line-height: 50px;
   text-decoration: none;
   color: #000;
 }
 .social__facebook:before {
   font-family: "fontello";
   display: inline-block;
+  height: 50px;
+  vertical-align: middle;
   font-size: 31px;
   margin-right: 21px;
   color: #c5cdd1;
-  line-height: 50px;
   content: '\e812';
 }
 .social__twitter:before {
   font-family: "fontello";
   display: inline-block;
+  height: 50px;
+  vertical-align: middle;
   font-size: 31px;
   margin-right: 21px;
   color: #c5cdd1;
-  line-height: 50px;
   content: '\e813';
 }
 .social__google:before {
   font-family: "fontello";
   display: inline-block;
+  height: 50px;
+  vertical-align: middle;
   font-size: 31px;
   margin-right: 21px;
   color: #c5cdd1;
-  line-height: 50px;
   content: '\e814';
 }
 .social__rss:before {
   font-family: "fontello";
   display: inline-block;
+  height: 50px;
+  vertical-align: middle;
   font-size: 31px;
   margin-right: 21px;
   color: #c5cdd1;
-  line-height: 50px;
   content: '\e820';
 }
 .social__pinterest:before {
   font-family: "fontello";
   display: inline-block;
+  height: 50px;
+  vertical-align: middle;
   font-size: 31px;
   margin-right: 21px;
   color: #c5cdd1;
-  line-height: 50px;
   content: '\e815';
 }
 .social__facebook:hover,

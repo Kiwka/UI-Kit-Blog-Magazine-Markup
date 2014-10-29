@@ -23,17 +23,17 @@ $social_icons = {
 	& li
 		line-height 50px
 	& a
-		line-height 50px
 		text-decoration none
 		color black
 	for $social_icons-name, $social_icons-keycode in $social_icons
 		&__{$social_icons-name}:before
 			font-family "fontello"
 			display inline-block
+			height 50px
+			vertical-align middle
 			font-size 31px
 			margin-right 21px
 			color $nonactive_color
-			line-height 50px
 			content '\'+$social_icons-keycode
 	for $social_colors-name, $social_colors-keycode in $social_colors
 		&__{$social_colors-name}:hover,
