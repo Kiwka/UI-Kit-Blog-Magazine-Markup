@@ -8,7 +8,7 @@
 body {
   background-color: #4b627e;
   margin: 0 auto;
-  width: 972px;
+  width: 974px;
   font-family: Roboto, Arial, serif;
 }
 .full-width {
@@ -16,35 +16,35 @@ body {
   background-color: #fff;
   display: inline-block;
   float: left;
-  margin: 12px 6px 0px 6px;
+  margin: 14px 7px 0px 7px;
 }
 .half-width {
-  width: 474px;
+  width: 473px;
   background-color: #fff;
   display: inline-block;
   float: left;
-  margin: 12px 6px 0px 6px;
+  margin: 14px 7px 0px 7px;
 }
 .third {
-  width: 318px;
+  width: 317.6666666666667px;
   background-color: #fff;
   display: inline-block;
   float: left;
-  margin: 12px 6px 0px 6px;
+  margin: 14px 7px 0px 7px;
 }
 .two-third {
-  width: 642px;
+  width: 642.3333333333334px;
   background-color: #fff;
   display: inline-block;
   float: left;
-  margin: 12px 6px 0px 6px;
+  margin: 14px 7px 0px 7px;
 }
 .quarter {
-  width: 231px;
+  width: 229.5px;
   background-color: #fff;
   display: inline-block;
   float: left;
-  margin: 12px 6px 0px 6px;
+  margin: 14px 7px 0px 7px;
 }
 .menu-horizontal {
   height: 60px;
@@ -394,8 +394,8 @@ body {
 .network:after {
   font-family: "fontello";
   position: absolute;
-  bottom: 16px;
-  right: 30px;
+  bottom: 22px;
+  right: 20px;
   font-size: 20px;
   font-weight: 200;
 }
