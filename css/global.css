@@ -324,6 +324,15 @@ body {
   line-height: 50px;
   content: '\e814';
 }
+.social__rss:before {
+  font-family: "fontello";
+  display: inline-block;
+  font-size: 31px;
+  margin-right: 21px;
+  color: #c5cdd1;
+  line-height: 50px;
+  content: '\e820';
+}
 .social__pinterest:before {
   font-family: "fontello";
   display: inline-block;
@@ -377,17 +386,31 @@ body {
   top: 23px;
   font-size: 42px;
 }
+.network:after {
+  font-family: "fontello";
+  position: absolute;
+  bottom: 16px;
+  right: 30px;
+  font-size: 20px;
+  font-weight: 200;
+}
 .network-facebook {
   background-color: #4d6baa;
 }
 .network-facebook:before {
   content: '\e802';
 }
+.network-facebook:after {
+  content: '\e821';
+}
 .network-twitter {
   background-color: #4fc6f8;
 }
 .network-twitter:before {
   content: '\e803';
+}
+.network-twitter:after {
+  content: '\e808';
 }
 .sign-in {
   text-align: center;

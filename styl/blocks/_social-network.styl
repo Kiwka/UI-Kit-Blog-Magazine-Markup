@@ -19,11 +19,22 @@
 		left 23px
 		top 23px
 		font-size 42px
+	&:after
+		font-family "fontello"
+		position absolute
+		bottom 16px
+		right 30px
+		font-size 20px
+		font-weight 200
 	&-facebook
 		background-color $facebook_color
 		&:before
 			content '\'+$icon-facebook
+		&:after
+			content '\'+$icon-plus
 	&-twitter
 		background-color $twitter_color
 		&:before
 			content '\'+$icon-twitter
+		&:after
+			content '\'+$icon-ok-circle
