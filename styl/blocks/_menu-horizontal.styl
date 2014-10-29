@@ -1,13 +1,23 @@
 //Style of the horizontal menu
+$icons = {
+	search: $icon-search
+	facebook: $icon-facebook
+	twitter: $icon-twitter
+	google: $icon-gplus
+	user: $icon-user
+}
+
 .menu-horizontal
 	height 60px
 	line-height @height
 	&__menu
 		display inline-block
+		float left
 		width 60px
 		background-color $hover-color
 		color #fff
 		text-align center
+		_clearfix()
 	&__menu:before
 		font-family "fontello"
 		content '\'+$icon-menu
@@ -17,6 +27,9 @@
 		margin 0px
 		display inline-block
 		padding 0px
+		float left
+		list-style-type none
+		_clearfix()
 	&__item
 		display inline-block
 		padding-right 40px
@@ -26,3 +39,23 @@
 			padding-right 0px
 		& a
 			text-decoration none
+			&:hover
+				color $hover-color
+	&__icons
+		display inline-block
+		float right
+		for $icons-name, $icons-keyword in $icons
+			&__{$icons-name}
+				font-family "fontello"
+				display inline-block
+				font-size 16px
+				padding 0 9px
+				color $nonactive_color
+			&__{$icons-name}:before
+				content '\'+$icons-keyword
+		&__user
+			padding 0 23px
+			border-left 1px $nonactive_color solid
+		&__search
+			padding 0 23px
+			border-right 1px $nonactive_color solid

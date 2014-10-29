@@ -4,3 +4,9 @@ block-view()
 	display inline-block
 	float left
 	margin $blocks_margin
+
+_clearfix()
+	&:after
+		content ""
+		display table
+		clear both

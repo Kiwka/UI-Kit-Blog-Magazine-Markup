@@ -52,10 +52,16 @@ body {
 }
 .menu-horizontal__menu {
   display: inline-block;
+  float: left;
   width: 60px;
   background-color: #56ccc8;
   color: #fff;
   text-align: center;
+}
+.menu-horizontal__menu:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 .menu-horizontal__menu:before {
   font-family: "fontello";
@@ -67,6 +73,13 @@ body {
   margin: 0px;
   display: inline-block;
   padding: 0px;
+  float: left;
+  list-style-type: none;
+}
+.menu-horizontal__items:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 .menu-horizontal__item {
   display: inline-block;
@@ -80,6 +93,71 @@ body {
 }
 .menu-horizontal__item a {
   text-decoration: none;
+}
+.menu-horizontal__item a:hover {
+  color: #56ccc8;
+}
+.menu-horizontal__icons {
+  display: inline-block;
+  float: right;
+}
+.menu-horizontal__icons__search {
+  font-family: "fontello";
+  display: inline-block;
+  font-size: 16px;
+  padding: 0 9px;
+  color: #c5cdd1;
+}
+.menu-horizontal__icons__search:before {
+  content: '\e801';
+}
+.menu-horizontal__icons__facebook {
+  font-family: "fontello";
+  display: inline-block;
+  font-size: 16px;
+  padding: 0 9px;
+  color: #c5cdd1;
+}
+.menu-horizontal__icons__facebook:before {
+  content: '\e802';
+}
+.menu-horizontal__icons__twitter {
+  font-family: "fontello";
+  display: inline-block;
+  font-size: 16px;
+  padding: 0 9px;
+  color: #c5cdd1;
+}
+.menu-horizontal__icons__twitter:before {
+  content: '\e803';
+}
+.menu-horizontal__icons__google {
+  font-family: "fontello";
+  display: inline-block;
+  font-size: 16px;
+  padding: 0 9px;
+  color: #c5cdd1;
+}
+.menu-horizontal__icons__google:before {
+  content: '\e805';
+}
+.menu-horizontal__icons__user {
+  font-family: "fontello";
+  display: inline-block;
+  font-size: 16px;
+  padding: 0 9px;
+  color: #c5cdd1;
+}
+.menu-horizontal__icons__user:before {
+  content: '\e804';
+}
+.menu-horizontal__icons__user {
+  padding: 0 23px;
+  border-left: 1px #c5cdd1 solid;
+}
+.menu-horizontal__icons__search {
+  padding: 0 23px;
+  border-right: 1px #c5cdd1 solid;
 }
 .menu-vertical {
   background-color: transparent;
