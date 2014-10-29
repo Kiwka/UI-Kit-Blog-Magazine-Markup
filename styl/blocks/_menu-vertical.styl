@@ -16,6 +16,7 @@ $footer_icons = {
 }
 
 .menu-vertical
+	background-color transparent
 	& ul
 		list-style-type none
 		margin-top 0px
@@ -23,6 +24,7 @@ $footer_icons = {
 		padding-left 0px
 	&__main
 		display inline-block
+		background-color white
 		width 50%
 		float left
 		&__item
@@ -88,11 +90,12 @@ $footer_icons = {
 		line-height 30px
 	&__section
 		border-bottom 1px $hover-color solid
-		&:last-child
-			border-bottom none
 		background-color #152840
 		padding 8px 0
+		&:last-child
+			border-bottom none
 		& li
+			font-weight 300
 			padding-left 33px
 	&__header
 		color $hover-color

@@ -81,6 +81,9 @@ body {
 .menu-horizontal__item a {
   text-decoration: none;
 }
+.menu-vertical {
+  background-color: transparent;
+}
 .menu-vertical ul {
   list-style-type: none;
   margin-top: 0px;
@@ -89,6 +92,7 @@ body {
 }
 .menu-vertical__main {
   display: inline-block;
+  background-color: #fff;
   width: 50%;
   float: left;
 }
@@ -271,6 +275,7 @@ body {
   border-bottom: none;
 }
 .menu-vertical__section li {
+  font-weight: 300;
   padding-left: 33px;
 }
 .menu-vertical__header {
