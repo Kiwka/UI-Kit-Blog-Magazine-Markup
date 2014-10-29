@@ -377,16 +377,16 @@ body {
   top: 23px;
   font-size: 42px;
 }
-#facebook {
+.network-facebook {
   background-color: #4d6baa;
 }
-#facebook:before {
+.network-facebook:before {
   content: '\e802';
 }
-#twitter {
+.network-twitter {
   background-color: #4fc6f8;
 }
-#twitter:before {
+.network-twitter:before {
   content: '\e803';
 }
 #sign-in {

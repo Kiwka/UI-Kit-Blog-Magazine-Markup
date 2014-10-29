@@ -1,0 +1,41 @@
+//Style for social networks list
+$social_colors = {
+	facebook: $facebook_color
+	twitter: $twitter_color
+	google: $google_color
+	rss: $rss_color
+	pinterest: $pinterest_color
+}
+
+$social_icons = {
+	facebook: $icon-facebook-circled
+	twitter: $icon-twitter-circled
+	google: $icon-gplus-circled
+	pinterest: $icon-pinterest-circled
+}
+
+#social
+	& ul
+		list-style-type none
+		margin 21px 0
+		padding-left 21px
+.social
+	& li
+		line-height 50px
+	& a
+		line-height 50px
+		text-decoration none
+		color black
+	for $social_icons-name, $social_icons-keycode in $social_icons
+		&__{$social_icons-name}:before
+			font-family "fontello"
+			display inline-block
+			font-size 31px
+			margin-right 21px
+			color $nonactive_color
+			line-height 50px
+			content '\'+$social_icons-keycode
+	for $social_colors-name, $social_colors-keycode in $social_colors
+		&__{$social_colors-name}:hover,
+		&__{$social_colors-name}:hover:before
+			color $social_colors-keycode

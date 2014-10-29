@@ -1,0 +1,27 @@
+//Global styles for the web-page
+body
+	background-color #4b627e
+	margin 0 auto
+	width $full_width
+	font-family Roboto, Arial, serif
+
+//Style for all blocks
+.full-width
+	width $full_width+(-2*$one_margin)
+	block-view()
+
+.half-width
+	width +($full_width/2)+(-2*$one_margin)
+	block-view()
+
+.third
+	width +($full_width/3)+(-1*$one_margin)
+	block-view()
+
+.two-third
+	width +(2*$full_width/3)+(-1*$one_margin)
+	block-view()
+
+.quarter
+	width +($full_width/4)+(-2*$one_margin)
+	block-view()

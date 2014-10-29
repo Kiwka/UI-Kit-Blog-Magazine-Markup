@@ -1,0 +1,105 @@
+//Style of the vertical menu
+$menu_icons = {
+	home: $icon-home
+	store: $icon-basket
+	blog: $icon-edit
+	community: $icon-group
+	contests: $icon-award
+	about: $icon-info
+	contact: $icon-mail
+}
+
+$footer_icons = {
+	phone: $icon-phone
+	address: $icon-location
+	email: $icon-mail
+}
+
+.menu-vertical
+	& ul
+		list-style-type none
+		margin-top 0px
+		margin-bottom 0px
+		padding-left 0px
+	&__main
+		display inline-block
+		width 50%
+		float left
+		&__item
+			height 60px
+			line-height 60px
+			border-bottom 1px gray solid
+			& a
+				text-decoration none
+				display block
+				box-sizing border-box
+				height 60px
+				width 100%
+				&:visited
+					color black
+				&:hover
+					background-color $hover-color
+					color #fff
+				&:target
+					background-color $hover-color
+				color #fff
+	for $menu_icons-name, $menu_icons-keycode in $menu_icons
+		&__{$menu_icons-name}:before
+			content '\'+$menu_icons-keycode
+			font-family "fontello"
+			display inline-block
+			margin-right 20px
+			margin-left 20px
+			font-size 20px
+			color $nonactive_color
+		&__{$menu_icons-name}:hover:before
+			color white
+	&__footer
+		background-color $nonactive_color
+		height 100%
+		color #fff
+		padding-top 16px
+		padding-bottom 16px
+		&__item
+			display block
+			margin-left 65px
+			padding-top 16px
+			padding-bottom 16px
+			& a
+				text-decoration none
+				color white
+		for $footer_icons-name, $footer_icons-keycode in $footer_icons
+			&__{$footer_icons-name}:before
+				content '\'+$footer_icons-keycode
+				font-family "fontello"
+				display inline-block
+				position absolute
+				left 20px
+				font-size 20px
+				top @font-size
+			&__{$footer_icons-name}
+				display inline-block
+				position relative
+	&__second
+		width 50%
+		float right
+		display inline-block
+		color #fff
+		line-height 30px
+	&__section
+		border-bottom 1px $hover-color solid
+		&:last-child
+			border-bottom none
+		background-color #152840
+		padding 8px 0
+		& li
+			padding-left 33px
+	&__header
+		color $hover-color
+		padding-left 33px
+		padding-bottom 6px
+		&:after
+			font-family "fontello"
+			content "\"+$icon-right-circle
+			float right
+			margin-right 18px

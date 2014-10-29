@@ -1,0 +1,43 @@
+//Sign-in section
+$social_colors = {
+	facebook: $facebook_color
+	twitter: $twitter_color
+	google: $google_color
+	linkedin: $linkedin_color
+}
+
+$social_icons = {
+	facebook: $icon-facebook
+	twitter: $icon-twitter
+	google: $icon-gplus
+	linkedin: $icon-linkedin
+}
+
+#sign-in
+	text-align center
+	height 165px
+.sign-in
+	&__header
+		font-weight 400
+		font-size 24px
+		margin-bottom 15px
+	&__text
+		font-weight 300
+		font-size 15px
+	&__icon
+		height 32px
+		width @height
+		line-height @height
+		border-radius 50%
+		margin 0 11px
+		font-family "fontello"
+		color white
+		display inline-block
+		&:before
+			display inline-block
+	for $social_colors-name, $social_colors-keycode in $social_colors
+		&__{$social_colors-name}
+			background-color $social_colors-keycode
+	for $social_icons-name, $social_icons-keycode in $social_icons
+		&__{$social_icons-name}:before
+			content '\'+$social_icons-keycode

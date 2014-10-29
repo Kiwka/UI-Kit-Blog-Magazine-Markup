@@ -1,0 +1,28 @@
+//Style of the horizontal menu
+.menu-horizontal
+	height 60px
+	line-height @height
+	&__menu
+		display inline-block
+		width 60px
+		background-color $hover-color
+		color #fff
+		text-align center
+	&__menu:before
+		font-family "fontello"
+		content '\'+$icon-menu
+		text-align center
+		font-size 18px
+	&__items
+		margin 0px
+		display inline-block
+		padding 0px
+	&__item
+		display inline-block
+		padding-right 40px
+		&:first-child
+			padding-left 50px
+		&:last-child
+			padding-right 0px
+		& a
+			text-decoration none
