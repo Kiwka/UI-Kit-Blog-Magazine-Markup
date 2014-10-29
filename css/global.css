@@ -284,7 +284,7 @@ body {
   float: right;
   margin-right: 18px;
 }
-#social ul {
+.social ul {
   list-style-type: none;
   margin: 21px 0;
   padding-left: 21px;
@@ -389,7 +389,7 @@ body {
 .network-twitter:before {
   content: '\e803';
 }
-#sign-in {
+.sign-in {
   text-align: center;
   height: 165px;
 }
@@ -441,7 +441,7 @@ body {
 }
 .newsletter {
   text-align: center;
-  height: 150px;
+  height: 165px;
 }
 .newsletter__header {
   font-weight: 400;
