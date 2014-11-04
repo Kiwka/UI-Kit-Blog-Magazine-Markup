@@ -4,24 +4,43 @@ body
 	margin 0 auto
 	width $full_width
 	font-family Roboto, Arial, serif
+	
+//Minor reset styles
+ul 
+	padding 0
+	margin 0
+	list-style-type none
 
 //Style for all blocks
+.block-view
+	background-color white
+	float left
+	margin $blocks_margin
+	box-sizing border-box
+
 .full-width
 	width $full_width+(-2*$one_margin)
-	block-view()
 
 .half-width
 	width +($full_width/2)+(-2*$one_margin)
-	block-view()
 
 .third
 	width +($full_width/3)+(-1*$one_margin)
-	block-view()
 
 .two-third
 	width +(2*$full_width/3)+(-1*$one_margin)
-	block-view()
 
 .quarter
 	width +($full_width/4)+(-2*$one_margin)
-	block-view()
+
+//More specific tipical blocks
+.short-info
+	text-align center
+	height 165px
+	&__header
+		font-weight 400
+		font-size 24px
+		margin-bottom 15px
+	&__text
+		font-weight 300
+		font-size 15px

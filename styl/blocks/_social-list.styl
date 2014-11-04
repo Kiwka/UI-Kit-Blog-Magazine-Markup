@@ -16,24 +16,19 @@ $social_icons = {
 }
 
 .social
-	& ul
-		list-style-type none
-		margin 21px 0
-		padding-left 21px
+	padding 21px 0 21px 21px
 	& li
 		line-height 50px
 	& a
 		text-decoration none
 		color black
-	for $social_icons-name, $social_icons-keycode in $social_icons
-		&__{$social_icons-name}:before
-			font-family "fontello"
-			display inline-block
-			height 50px
+		&:before 
+			font 31px "fontello"
 			vertical-align middle
-			font-size 31px
 			margin-right 21px
 			color $nonactive_color
+	for $social_icons-name, $social_icons-keycode in $social_icons
+		&__{$social_icons-name}:before
 			content '\'+$social_icons-keycode
 	for $social_colors-name, $social_colors-keycode in $social_colors
 		&__{$social_colors-name}:hover,

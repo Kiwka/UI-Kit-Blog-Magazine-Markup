@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="css/global.css">
 </head>
 <body>
-<nav class="menu-horizontal full-width">
+<nav class="menu-horizontal full-width block-view">
 	<div class="menu-horizontal__menu"></div>
 	<ul class="menu-horizontal__items">
 		<li class="menu-horizontal__item"><a href="">Home</a></li>
@@ -17,14 +17,14 @@
 		<li class="menu-horizontal__item"><a href="">Contact</a></li>
 	</ul>
 	<ul class="menu-horizontal__items menu-horizontal__icons">
-		<li class="menu-horizontal__icons__search"></li>
-		<li class="menu-horizontal__icons__facebook"></li>
-		<li class="menu-horizontal__icons__twitter"></li>
-		<li class="menu-horizontal__icons__google"></li>
-		<li class="menu-horizontal__icons__user"></li>
+		<li class="menu-horizontal__icons__search menu-horizontal__icons__item"></li>
+		<li class="menu-horizontal__icons__facebook menu-horizontal__icons__item"></li>
+		<li class="menu-horizontal__icons__twitter menu-horizontal__icons__item"></li>
+		<li class="menu-horizontal__icons__google menu-horizontal__icons__item"></li>
+		<li class="menu-horizontal__icons__user menu-horizontal__icons__item"></li>
 	</ul>
 </nav>
-<nav class="menu-vertical half-width">
+<nav class="menu-vertical half-width block-view">
 	<div class="menu-vertical__main">
 		<ul>
 			<li class="menu-vertical__main__item"><a class="menu-vertical__home" href="">Home</a></li>
@@ -36,21 +36,15 @@
 			<li class="menu-vertical__main__item"><a class="menu-vertical__contact" href="">Contact</a></li>
 		</ul>
 		<footer class="menu-vertical__footer">
-			<div class="menu-vertical__footer__phone ">
-				<ul class="menu-vertical__footer__item">
-					<li><a href="tel:+19125551234">(912)555-1234</tel></a></li>
-					<li><a href="tel:+19125555678">(912)555-5678</a></li>
-				</ul>
-			</div>
-			<div class="menu-vertical__footer__address">
-				<div class="menu-vertical__footer__item">1600 Pennsylvania Ave NW, Washington DC 20500, USA</div>
-			</div>
-			<div class="menu-vertical__footer__email">
-				<ul class="menu-vertical__footer__item">
-					<li><a href="mailto:hello@website.com">hello@website.com</a></li>
-					<li><a href="mailto:office@website.com">office@website.com</a></li>
-				</ul>
-			</div>
+			<ul class="menu-vertical__footer__item menu-vertical__footer__phone">
+				<li><a href="tel:+19125551234">(912)555-1234</tel></a></li>
+				<li><a href="tel:+19125555678">(912)555-5678</a></li>
+			</ul>
+			<div class="menu-vertical__footer__item menu-vertical__footer__address">1600 Pennsylvania Ave NW, Washington DC 20500, USA</div>
+			<ul class="menu-vertical__footer__item menu-vertical__footer__email">
+				<li><a href="mailto:hello@website.com">hello@website.com</a></li>
+				<li><a href="mailto:office@website.com">office@website.com</a></li>
+			</ul>
 		</footer>
 	</div>
 	<div class="menu-vertical__second">
@@ -89,7 +83,7 @@
 		</section>
 	</div>
 </nav>
-<section class="quarter social">
+<section class="quarter social block-view">
 	<ul>
 		<li><a href="http://facebook.com/" class="social__facebook">Facebook</a></li>
 		<li><a href="http://twitter.com/" class="social__twitter">Twitter</a></li>
@@ -98,23 +92,25 @@
 		<li><a href="http://pinterest.com/" class="social__pinterest">Pinterest</a></li>
 	</ul>
 </section>
-<section class="network quarter network-facebook">
+<section class="network quarter network_facebook block-view">
 	<div class="network__number">156K</div>
 	<div class="network__status">Follow</div>
 </section>
-<section class="network quarter network-twitter">
+<section class="network quarter network_twitter block-view">
 	<div class="network__number">89K</div>
 	<div class="network__status">Following</div>
 </section>
-<section class="half-width sign-in">
+<section class="half-width sign-in block-view short-info">
 	<h2 class="sign-in__header">Sign in</h2>
 	<p class="sign-in__text">Just select your favorite network to get started</p>
-	<div class="sign-in__icon sign-in__facebook"></div>
-	<div class="sign-in__icon sign-in__twitter"></div>
-	<div class="sign-in__icon sign-in__google"></div>
-	<div class="sign-in__icon sign-in__linkedin"></div>
+	<ul>
+		<li class="sign-in__icon sign-in__facebook"></li>
+		<li class="sign-in__icon sign-in__twitter"></li>
+		<li class="sign-in__icon sign-in__google"></li>
+		<li class="sign-in__icon sign-in__linkedin"></li>
+	</ul>
 </section>
-<section class="half-width newsletter">
+<section class="half-width newsletter block-view short-info">
 	<h2 class="newsletter__header">Join the Newsletter</h2>
 	<p class="newsletter__text">Sign up for our personalized daily newsletter</p>
 	<form action="">

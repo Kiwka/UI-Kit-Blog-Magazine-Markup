@@ -11,7 +11,6 @@ $icons = {
 	height 60px
 	line-height @height
 	&__menu
-		display inline-block
 		float left
 		width 60px
 		background-color $hover-color
@@ -19,43 +18,34 @@ $icons = {
 		text-align center
 		_clearfix()
 	&__menu:before
-		font-family "fontello"
+		font 18px "fontello"
 		content '\'+$icon-menu
-		text-align center
-		font-size 18px
 	&__items
-		margin 0px
-		display inline-block
+		margin 0 0 0 10px
 		padding 0px
 		float left
-		list-style-type none
 		_clearfix()
 	&__item
 		display inline-block
-		padding-right 40px
-		&:first-child
-			padding-left 50px
-		&:last-child
-			padding-right 0px
+		padding-left 40px
 		& a
 			text-decoration none
 			&:hover
 				color $hover-color
 	&__icons
-		display inline-block
 		float right
-		for $icons-name, $icons-keyword in $icons
-			&__{$icons-name}
-				font-family "fontello"
-				display inline-block
-				font-size 16px
-				padding 0 9px
-				color $nonactive_color
+		&__item
+			font 16px/60px "fontello"
+			display inline-block
+			color $nonactive_color
+			padding 0 9px
+		for $icons-name, $icons-keyword in $icons				
 			&__{$icons-name}:before
 				content '\'+$icons-keyword
 		&__user
-			padding 0 23px
-			border-left 1px $nonactive_color solid
 		&__search
 			padding 0 23px
+		&__user
+			border-left 1px $nonactive_color solid
+		&__search
 			border-right 1px $nonactive_color solid

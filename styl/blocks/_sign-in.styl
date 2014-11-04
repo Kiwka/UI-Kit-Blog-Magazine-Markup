@@ -14,15 +14,6 @@ $social_icons = {
 }
 
 .sign-in
-	text-align center
-	height 165px
-	&__header
-		font-weight 400
-		font-size 24px
-		margin-bottom 15px
-	&__text
-		font-weight 300
-		font-size 15px
 	&__icon
 		height 32px
 		width @height
@@ -32,8 +23,6 @@ $social_icons = {
 		font-family "fontello"
 		color white
 		display inline-block
-		&:before
-			display inline-block
 	for $social_colors-name, $social_colors-keycode in $social_colors
 		&__{$social_colors-name}
 			background-color $social_colors-keycode
